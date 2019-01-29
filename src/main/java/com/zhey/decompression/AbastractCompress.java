@@ -3,7 +3,6 @@ package com.zhey.decompression;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 
 public abstract class AbastractCompress implements Compression {
     private String filePath;

@@ -8,7 +8,6 @@ import com.github.junrar.rarfile.UnrarHeadertype;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
-import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 

@@ -1,6 +1,8 @@
 package com.zhey.decompression;
 
 import org.apache.commons.compress.archivers.zip.ZipArchiveEntry;
+import org.apache.commons.compress.archivers.zip.ZipEncoding;
+import org.apache.commons.compress.archivers.zip.ZipEncodingHelper;
 import org.apache.commons.compress.archivers.zip.ZipFile;
 
 import java.io.*;
@@ -21,7 +23,7 @@ public class Zip extends AbastractCompress implements Compression {
     public boolean loadCompress(File file) {
         List<String> files = new ArrayList<String>();
         try {
-            zipFile = new ZipFile(file);
+            zipFile = new ZipFile(file,"CP936");
             Enumeration<ZipArchiveEntry> zipEntryEnumeration = zipFile.getEntries();
             while (zipEntryEnumeration.hasMoreElements()) {
                 ZipArchiveEntry zipEntry = zipEntryEnumeration.nextElement();
